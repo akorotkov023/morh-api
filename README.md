@@ -75,13 +75,8 @@
 \* Может быть запущено N процеассов параллельно. Устойчиво к параллельной обработке.
 
 ## Command for dev:
-
-1. scp subscription_20190610 vgievoi@bs-morh-prod:/opt/morh//app/resource/storage/inbox
-2. ssh user@bs-morh-prod
-3. sudo docker exec -it morh-php-fpm sh
-4. php bin/console
-5. php bin/console morh:registries:parse -vvv
-6. while true; do php bin/console morh:transactions:handle -vvv; sleep 1; done
+1. php bin/console morh:registries:parse -vvv
+2. while true; do php bin/console morh:transactions:handle -vvv; sleep 1; done
 
 ## TODO
 * Автоматический забор реестра с почты
